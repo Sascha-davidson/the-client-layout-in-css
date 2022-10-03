@@ -7,6 +7,36 @@
     <link rel="stylesheet" href="../style.css" />
     <style>
       /* Doe hier jouw ding! */
+
+      body {
+      display: grid;
+      grid-template-columns: 20% 1fr 1fr 1fr 20%;
+      grid-template-rows: 25% 25% 25% 25%;
+      column-gap: 20px;
+      row-gap: 20px;
+      grid-template-areas:
+        ". . hoofd hoofd ."
+        ". navigatie navigatie . ."
+        ". . ligaam ligaam ."
+        ". . onderkant onderkant ."
+
+    }
+
+    header {
+      grid-area: hoofd;
+    }
+
+    nav {
+      grid-area: navigatie;
+    }
+
+    main {
+      grid-area: ligaam;
+    }
+
+    footer {
+      grid-area: onderkant;
+    }
     </style>
   </head>
   <body id="advanced-layout-1">
