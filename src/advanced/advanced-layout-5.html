@@ -1,18 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Advanced Layout 5</title>
-    <link rel="stylesheet" href="../style.css" />
-    <style>
-      /* Doe hier jouw ding! */
-    </style>
-  </head>
-  <body id="advanced-layout-5">
-    <header><h1>Advanced Layout 5</h1></header>
-    <nav><a href="../index.html">Terug naar het overzicht</a></nav>
-    <main></main>
-    <footer></footer>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advanced Layout 5</title>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    /* Doe hier jouw ding! */
+
+    body {
+      display: grid;
+      grid-template-columns: 20% 5fr 2fr 1fr 2fr 3fr 20%;
+      grid-template-rows: 3fr 2fr 1fr 2fr 5fr 2fr 2fr;
+    }
+
+    header {
+      grid-area: hoofd;
+
+      grid-column: 5 / span 2;
+      grid-row: 1 / span 2;
+      z-index: 3;
+    }
+
+
+    nav {
+      grid-area: navigatie;
+
+      grid-column: 3 / span 3;
+      grid-row: 2 / span 3;
+      z-index: 2;
+    }
+
+    main {
+      grid-area: ligaam;
+
+      grid-column: 2 / span 2;
+      grid-row: 4 / span 3;
+      z-index: 1;
+    }
+
+    footer {
+      grid-area: onderkant;
+
+      grid-column: 3 / span 4;
+      grid-row: 6 / span 2;
+      z-index: 2;
+    }
+  </style>
+</head>
+
+<body id="advanced-layout-5">
+  <header>
+    <h1>Advanced Layout 5</h1>
+  </header>
+  <nav><a href="../index.html">Terug naar het overzicht</a></nav>
+  <main></main>
+  <footer></footer>
+</body>
+
 </html>

@@ -1,18 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Advanced Layout 4</title>
-    <link rel="stylesheet" href="../style.css" />
-    <style>
-      /* Doe hier jouw ding! */
-    </style>
-  </head>
-  <body id="advanced-layout-4">
-    <header><h1>Advanced Layout 4</h1></header>
-    <nav><a href="../index.html">Terug naar het overzicht</a></nav>
-    <main></main>
-    <footer></footer>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advanced Layout 4</title>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    /* Doe hier jouw ding! */
+
+    body {
+      display: grid;
+      grid-template-columns: 20% 1fr 1fr 20%;
+      grid-template-rows: 11rem 1.5rem 1.5rem 11rem;
+      column-gap: 20px;
+
+
+    }
+
+    header {
+      grid-area: hoofd;
+      clip-path: polygon(0% 0%, 100% 0%, 100% 9.5rem, 0% 100%);
+
+      grid-column-start: 3;
+      grid-column-end: 4;
+      grid-row-start: 1;
+      grid-row-end: 2;
+    }
+
+    nav {
+      grid-area: navigatie;
+      clip-path: polygon(0% 0%, 100% 0%, 100% 11.1rem, 0% 100%);
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 1;
+      grid-row-end: 3;
+    }
+
+    main {
+      grid-area: ligaam;
+
+      grid-area: main;
+      clip-path: polygon(0% 1.5rem, 100% 0%, 100% 100%, 0% 100%);
+
+      grid-column-start: 2;
+      grid-column-end: 3;
+      grid-row-start: 3;
+      grid-row-end: 5;
+    }
+
+    footer {
+      grid-area: onderkant;
+      clip-path: polygon(0% 1.5rem, 100% 0%, 100% 100%, 0% 100%);
+
+      grid-column-start: 3;
+      grid-column-end: 4;
+      grid-row-start: 2;
+      grid-row-end: 5;
+    }
+  </style>
+</head>
+
+<body id="advanced-layout-4">
+  <header>
+    <h1>Advanced Layout 4</h1>
+    <div class header></div>
+  </header>
+  <nav><a href="../index.html">Terug naar het overzicht</a></nav>
+  <main></main>
+  <footer></footer>
+</body>
+
 </html>
