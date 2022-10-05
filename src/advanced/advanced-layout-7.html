@@ -1,18 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Advanced Layout 7</title>
-    <link rel="stylesheet" href="../style.css" />
-    <style>
-      /* Doe hier jouw ding! */
-    </style>
-  </head>
-  <body id="advanced-layout-7">
-    <header><h1>Advanced Layout 7</h1></header>
-    <nav><a href="../index.html">Terug naar het overzicht</a></nav>
-    <main></main>
-    <footer></footer>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advanced Layout 7</title>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    /* Doe hier jouw ding! */
+
+    body {
+      display: grid;
+      grid-template-columns: 10% 1fr 1fr 1fr 1fr 1fr 1fr 10%;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr  1fr 1fr;
+    }
+
+    h1{
+      font-size: 100%;
+    }
+
+
+    header {
+      grid-area: hoofd;
+      grid-column: 7 / span 1;
+      grid-row: 1 / span 1;
+      z-index: 3;
+      width: 7rem;
+      height: 7rem;
+    }
+
+
+    nav {
+      grid-area: navigatie;
+      width: 310px;
+      height: 310px;
+      grid-column: 6 / span 2;
+      grid-row: 2 / span 2;
+      z-index: 2;
+      transform: rotate(-45deg)
+
+      
+    }
+
+    main {
+      grid-area: ligaam;
+
+      grid-column: 2 / span 5;
+      grid-row: 3 / span 4;
+    }
+
+    footer {
+      grid-area: onderkant;
+      width: 310px;
+      height: 310px;
+      grid-column: 2 / span 2;
+      grid-row: 7 / span 2;
+
+      transform: rotate(-45deg)
+
+    }
+  </style>
+</head>
+
+<body id="advanced-layout-7">
+  <header>
+    <h1>Advanced Layout 7</h1>
+  </header>
+  <nav><a href="../index.html">Terug naar het overzicht</a></nav>
+  <main></main>
+  <footer></footer>
+</body>
+
 </html>
